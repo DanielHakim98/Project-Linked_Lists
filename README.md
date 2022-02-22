@@ -7,3 +7,8 @@
 * Create 3 files: main.rb, node.rb, linked_list.rb
 * Create class "Node" which is an element in a linked list.
 ---
+23 Feb 2022
+* Create class "Linkedlist" which represents a whole linked list that stores the head node of the list.
+* Modify node.rb by requiring data assignment at initialization.
+* Create new "puts" that allows to show output of an object from LinkedList class.
+---

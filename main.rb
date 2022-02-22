@@ -1,19 +1,21 @@
 require_relative "node"
 require_relative "linked_list"
 
-def printlist(n)
-  while(n!=nil)
-    puts n.data
-    n=n.next_node
+head = Node.new(3)
+second = Node.new(5)
+third = Node.new(8)
+
+head.next(second)
+second.next(third)
+
+llist = LinkedList.new(head)
+
+def puts(o)
+  if o.is_a? LinkedList
+    o.printlist()
+  else
+    super(o)
   end
 end
 
-head = Node.new()
-second = Node.new()
-third = Node.new()
-
-head.value(1,second)
-second.value(2,third)
-third.value(3)
-
-printlist(head)
+puts llist
