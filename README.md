@@ -11,4 +11,5 @@
 * Create class "Linkedlist" which represents a whole linked list that stores the head node of the list.
 * Modify node.rb by requiring data assignment at initialization.
 * Create new "puts" that allows to show output of an object from LinkedList class.
+* Add "append" method to "LinkedList" class.
 ---

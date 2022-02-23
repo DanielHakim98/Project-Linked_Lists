@@ -4,10 +4,13 @@ class Node
   def initialize(data=nil)
     @@size+=1
     @data = data
+    @next_node = nil
   end
-  def next(next_node=nil)
+
+  def next(next_node)
     @next_node = next_node
   end
+
   def self.total_nodes()
     @@size
   end
