@@ -13,3 +13,7 @@
 * Create new "puts" that allows to show output of an object from LinkedList class.
 * Add "append" method to "LinkedList" class.
 ---
+25 Feb 2022
+* Add "unshift" (prepend), "size", "to_s" methods to "LinkedList" class.
+* Create auxiliary.rb for "LinkedList" class.
+---

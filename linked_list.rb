@@ -1,6 +1,7 @@
 class LinkedList
   attr_reader :first
   def initialize(first=nil)
+    raise ArgumentTypeError if !first.is_a? Node
     @first = first
   end
 
@@ -16,6 +17,7 @@ class LinkedList
   end
 
   def append(new_n)
+    raise ArgumentTypeError if !new_n.is_a? Node
     n=@first
     while n!=nil
       unless n.next_node != nil
@@ -25,12 +27,32 @@ class LinkedList
       n = n.next_node
     end
   end
-end
 
-def puts(o)
-  if o.is_a? LinkedList
-    o.printlist()
-  else
-    super(o)
+  def unshift(new_n)
+    raise ArgumentTypeError if !new_n.is_a? Node
+    n=@first
+    new_n.next(n)
+    @first = new_n
+  end
+
+  def size()
+    size = 0
+    n = @first
+    while n!=nil
+      size+=1
+      n = n.next_node
+    end
+    size
+  end
+
+  def to_s
+    n = @first
+    string = ""
+    while n!=nil
+      string+="( #{n.data} ) -> "
+      n = n.next_node
+    end
+    string + "nil \n"
   end
 end
+
