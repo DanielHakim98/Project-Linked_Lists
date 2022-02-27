@@ -14,6 +14,10 @@ class Node
   def self.total_nodes()
     @@size
   end
+
+  def value(data=nil)
+    @data = data
+  end
 end
 
 

@@ -17,3 +17,7 @@
 * Add "unshift" (prepend), "size", "to_s" methods to "LinkedList" class.
 * Create auxiliary.rb for "LinkedList" class.
 ---
+27 Feb 2022
+* Add "tail" and "at" methods to "LinkedList" class.
+* Add "pop" method, but it's still not working as I thought because it doesn't remove the next node reference of the second last node in the linked list object.
+---
