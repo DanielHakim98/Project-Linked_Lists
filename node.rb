@@ -17,6 +17,7 @@ class Node
 
   def value(data=nil)
     @data = data
+    p @data.class
   end
 end
 

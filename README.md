@@ -21,3 +21,7 @@
 * Add "tail" and "at" methods to "LinkedList" class.
 * Add "pop" method, but it's still not working as I thought because it doesn't remove the next node reference of the second last node in the linked list object.
 ---
+28 Feb 2022
+* Fix "pop" method" and add "contains?(value)" and "find(value)" methods
+* Next plan: (Bonus) Add "insert_at(value,idx)" and "remove_at(idx)" methods.
+---

@@ -68,19 +68,38 @@ class LinkedList
       i+=1
     end
   end
-#pop method doesn't work as intended
+
   def pop
-    n=@first
-    while n!=nil
-      if n.next_node != nil
-        n = n.next_node
-        next
+    pre_node = nil
+    now_node = @first
+    while now_node!=nil
+      if now_node.next_node == nil
+        pre_node.next(nil)
+        return now_node.data
       end
-      pop_val = n.data
-      n.value()
-      reset_last()
-      break
+      pre_node = now_node
+      now_node = now_node.next_node
     end
+  end
+
+  def contains?(value)
+    n = @first
+    while(n!=nil)
+      return true if value == n.data
+      n = n.next_node
+    end
+    false
+  end
+
+  def find(value)
+    n = @first
+    i = 0
+    while(n!=nil)
+      return i if value == n.data
+      n = n.next_node
+      i+=1
+    end
+    nil
   end
 
   def to_s
@@ -91,19 +110,6 @@ class LinkedList
       n = n.next_node
     end
     string + "nil \n"
-  end
-#reset_last method doesn't work as intended
-  private
-  def reset_last()
-    n=@first
-    while n!=nil
-      if n.data != nil
-        n = n.next_node
-        next
-      end
-      n.next(nil)
-      break
-    end
   end
 end
 
